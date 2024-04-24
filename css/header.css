@@ -1,0 +1,105 @@
+@import url('./reset.css');
+
+@font-face {
+    font-family: 'e-Ukraine';
+    src: url('../fonts/e-UkraineHead-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: black !important;
+    cursor: pointer;
+}
+
+header{
+    margin-top: 40px;
+    font-family: 'e-Ukraine';
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.nav {
+    color: black;
+    /* margin: 40px 85px; */
+    padding: 25px 24px 25px 41px;
+    background-color: #FFDD8B;
+    border-radius: 51px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 4px 4px 27px rgba(0, 0, 0, 0.25);
+}
+
+.image-logo img {
+    border-radius: 13px;
+    position: relative;
+}
+.image-logo{
+    padding-right: 10px;
+}
+.menu_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.menu_item {
+    padding: 24px 30px;
+    position: relative;
+}
+.active{
+    padding: 24px 30px;
+    position: relative;
+    border-radius: 51px;
+    background-color: #ffffff;
+    transition: background-color 0.5s ease;
+}
+.menu_item:hover {
+    border-radius: 51px;
+    background-color: #ffffff;
+    transition: background-color 0.5s ease;
+}
+
+.block_menu {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sequel-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.sequel-dropdown li {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sequel-dropdown li:hover {
+    background-color: #f1f1f1;
+}
+
+.menu_item:hover .sequel-dropdown {
+    display: block;
+}
+
+.timer {
+    background: #539C39;
+    color: white;
+    /* width: 201px; */
+    height: 87px;
+    display: flex;
+    justify-content: center; /* Вирівнювання по горизонталі */
+    align-items: center; /* Вирівнювання по вертикалі */
+    text-align: center; /* Розміщення тексту в центрі */
+    border-radius: 0 0 51px 51px;
+}
