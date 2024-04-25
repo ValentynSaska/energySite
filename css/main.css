@@ -1,5 +1,115 @@
-@import url(./reset.css);
+@import url('reset.css');
 
+/* Підключення шрифту */
+@font-face {
+    font-family: 'e-Ukraine';
+    src: url('../fonts/e-UkraineHead-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Загальні стилі для body */
 body {
+    /* background: #000; Чорний фон */
     background-color: #497BBD;
 }
+
+/* --------------------------------------------------------------------------*/
+
+/* Стилі для відео контейнера */
+.vid {
+    width: 100%; /* Ширина контейнера відео */
+    height: 75%; /* Висота контейнера відео */
+    overflow: hidden; /* Обрізання вмісту, який виходить за межі контейнера */
+}
+video {
+    display: block; /* Відео відображається як блочний елемент */
+    width: 100%; /* Розміри відео - 100% ширини контейнера */
+}
+
+/* Стилі для блоку з цитатою */
+.video_quote {
+    color: #fff; /* Колір тексту */
+    font-family: 'e-Ukraine'; /* Шрифт */
+    font-size: 75px; /* Розмір шрифту */
+    font-weight: bold; /* Жирний шрифт */
+    transition: font-size 0.5s; /* Плавна зміна розміру шрифту */
+    position: relative; /* Позиціонування відносно батьківського елемента */
+}
+
+/* Стилі для блоку з цитатою */
+.quote {
+    position: absolute; /* Абсолютне позиціонування */
+    top: 50%; /* Вертикальне позиціонування від верхнього краю батьківського елемента */
+    left: 50%; /* Горизонтальне позиціонування від лівого краю батьківського елемента */
+    transform: translate(-50%, -50%); /* Зсув елемента на 50% вліво та вгору, щоб він був по центру */
+    text-align: center; /* Вирівнювання тексту по центру */
+    z-index: 1; /* Рівень накладання */
+    white-space: nowrap; /* Запобігає переносу тексту на новий рядок */
+}
+
+/* --------------------------------------------------------------------------*/
+
+/* Блок новин */
+.news{
+    display: flex;
+    padding-top: 70px;
+    color: #000000; /* Колір тексту */
+    font-family: 'e-Ukraine'; /* Шрифт */
+    font-size: 40px; /* Розмір шрифту */
+    font-weight: bold; /* Жирний шрифт */
+    transition: font-size 0.5s; /* Плавна зміна розміру шрифту */
+    background: #539C39;
+    
+}
+
+/* Надпис що нового */
+.name{
+    width: 90%;
+    background-color: #ffffff;
+    padding: 1% 1% 1% 3%;
+    border-radius: 50px;
+    box-shadow: 4px 4px 27px rgba(0, 0, 0, 0.25);
+    margin: 0 auto; /* Центруємо елемент по горизонталі */
+}
+.news {
+    display: grid;
+    place-items: center;
+}
+
+/* Слайдер */
+.splide{
+    margin-top: 80px;
+    margin-bottom: 60px;
+    width: 100rem; /* Встановлюємо ширину слайдера */
+    padding: 0 14rem;
+}
+.splide__track {
+    border-radius: 27px;
+    background-color: #fff;
+    height: 30rem; /* Встановлюємо висоту в 300px */
+    overflow: hidden; /* Обрізаємо зайвий контент */
+}
+
+/* Центруємо текст всередині .name */
+.name {
+    text-align: center; /* Вирівнюємо текст по центру */
+}
+
+.name p {
+    text-align: left; /* Вирівнюємо текст всередині параграфа зліва */
+    margin-bottom: 0px;
+}
+
+/* Стилі для слайдів */
+.splide__pagination{
+    bottom: -50px;
+}
+.slide_wrapper{
+    padding: 50px 15px;
+}
+.splide__arrow{
+    background-color: #fff;
+}
+
+/* --------------------------------------------------------------------------*/

@@ -1,4 +1,4 @@
-@import url('./reset.css');
+@import url('reset.css');
 
 @font-face {
     font-family: 'e-Ukraine';
@@ -7,99 +7,98 @@
     font-style: normal;
 }
 
-a {
+.nav-link:not(.dropdown-toggle) {
     text-decoration: none;
     color: black !important;
     cursor: pointer;
 }
 
-header{
+header {
     margin-top: 40px;
+    margin-bottom: 20px;
     font-family: 'e-Ukraine';
     font-size: 40px;
     font-weight: bold;
+    transition: font-size 0.5s;
 }
-
-.nav {
-    color: black;
-    /* margin: 40px 85px; */
-    padding: 25px 24px 25px 41px;
-    background-color: #FFDD8B;
-    border-radius: 51px;
+.navbar-nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Вирівнюємо елементи по центру по вертикалі */
+    height: 100%; /* Встановлюємо висоту nav на весь висоту вікна */
+    justify-content: center; /* Вирівнюємо елементи по центру по горизонталі */
+}
+.nav-item .nav-link {
+    display: flex;
+    align-items: center; /* Вирівнюємо елементи по центру по вертикалі */
+}
+.navbar {
+    color: black;
+    padding: 2% 2% 2% 2%;
+    background-color: #FFDD8B;
+    border-radius: 50px;
     box-shadow: 4px 4px 27px rgba(0, 0, 0, 0.25);
 }
 
-.image-logo img {
-    border-radius: 13px;
+.navbar-brand img {
+    border-radius: 10%;
+}
+
+.nav-item{
     position: relative;
-}
-.image-logo{
-    padding-right: 10px;
-}
-.menu_link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.menu_item {
-    padding: 24px 30px;
-    position: relative;
-}
-.active{
-    padding: 24px 30px;
-    position: relative;
-    border-radius: 51px;
-    background-color: #ffffff;
+    border-radius: 50px;
     transition: background-color 0.5s ease;
-}
-.menu_item:hover {
-    border-radius: 51px;
-    background-color: #ffffff;
-    transition: background-color 0.5s ease;
+    padding: auto;
 }
 
-.block_menu {
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    justify-content: space-between;
+.nav-item:hover {
+    color: #000000;
+    background-color: #f8f9fa;
 }
 
-.sequel-dropdown {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
+.dropdown-menu {
+    background-color: #539C39;
+    color: #ffffff !important;
 }
 
-.sequel-dropdown li {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.sequel-dropdown li:hover {
-    background-color: #f1f1f1;
-}
-
-.menu_item:hover .sequel-dropdown {
-    display: block;
+/* Колір шрифту випадаючого меню */
+.dropdown-item {
+    color: #ffffff;
 }
 
 .timer {
     background: #539C39;
-    color: white;
-    /* width: 201px; */
-    height: 87px;
+    color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
-    justify-content: center; /* Вирівнювання по горизонталі */
-    align-items: center; /* Вирівнювання по вертикалі */
-    text-align: center; /* Розміщення тексту в центрі */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     border-radius: 0 0 51px 51px;
+    transition: padding 0.5s;
+}
+
+@media (max-width: 1550px) {
+    header {
+        font-size: 30px;
+    }
+}
+@media (max-width: 1250px) {
+    header {
+        font-size: 25px;
+    }
+    .timer {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+@media (min-width: 2300px) {
+    header {
+        font-size: 60px;
+    }
+}
+@media (min-width: 5600px) {
+    header {
+        font-size: 100px;
+    }
 }

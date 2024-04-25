@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/splide.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/header.css">
@@ -10,42 +11,47 @@
 </head>
 <body>
     <header>
-        <div class="container-fluid">
-            <div class="row">
-                    <nav class="nav col-11 mx-auto">
-                        <ul class="block_menu">
-                            <li class="image-logo col-1"><img src="img/цк енергетики.png" alt="Логотип"></li>
-                            <li class="active"><a href="#" class="menu_link">Що нового?</a></li>
-                            <li class="menu_item"><a href="#" class="menu_link">Про нас</a></li>
-                            <li class="menu_item"><a href="#" class="menu_link">Досягнення</a></li>
-                            <li class="menu_item"><a href="#" class="menu_link">Викладачі</a></li>
-                            <li class="menu_item">   
-                                <a href="#">⋮</a>
-                                <ul class="sequel-dropdown">
-                                    <li>
-                                        <a href="" class="more_menu">Випускники</a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="more_menu">Історія</a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="more_menu">Навчальний план</a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="more_menu">Галерея</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu_item">
-                                <a href="#" class="menu_link">
-                                    <img src="img/profile.png" width="39" alt="Профіль"> Вхід
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>     
-            </div>
-            <div class="row">
-                <div class="col-2 order-last">
+        <div class="container-fluid px-0">
+            <div class="row justify-content-between mx-5">
+                <nav class="navbar navbar-expand-lg navbar-light d-flex">
+                    <div class="container-fluid d-flex px-0">
+                        <a class="navbar-brand col-3 col-lg-1" href="#"><img src="img/цк енергетики.png" alt="Логотип"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Що нового?</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Про нас</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Досягнення</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Викладачі</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="toggleDropdownButton()">⋮</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Випускники</a></li>
+                                        <li><a class="dropdown-item" href="#">Історія</a></li>
+                                        <li><a class="dropdown-item" href="#">Навчальний план</a></li>
+                                        <li><a class="dropdown-item" href="#">Галерея</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <img src="img/profile.png" width="39" alt="Профіль"> Вхід
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="col-10 col-lg-2 ms-lg-auto mx-lg-5 ">
                     <div class="timer">
                         <h2>00.00</h2>
                     </div>
@@ -53,7 +59,32 @@
             </div>
         </div>
     </header>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <section class="video_quote">
+        <div class="vid container-fluid px-0">
+            <video autoplay muted loop>
+                <source src="video/light theme video.mp4" type="video/mp4">
+            </video>
+            <p class="quote">"Енергетика – це ключ до розвитку."</p>
+        </div>
+    </section>
+    <section class="news">
+            <div class="name">
+                <p>Що нового?</p>
+            </div>
+                <div class="splide" role="group">
+                    <div class="splide__track">
+                          <ul class="splide__list">
+                              <div class="splide__slide">Slide 01</div>
+                              <div class="splide__slide">Slide 02</div>
+                              <div class="splide__slide">Slide 03</div>
+                          </ul>
+                    </div>
+                </div>
+    </section>
+    
 </body>
+    <script src="js/splide.min.js"></script>
+    <script src="js/newsslider.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/header.js"></script>
 </html>
