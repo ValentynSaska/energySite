@@ -35,8 +35,9 @@ header {
     color: black;
     padding: 2% 2% 2% 2%;
     background-color: #FFDD8B;
-    border-radius: 50px;
+    border-radius: 50px 50px 50px 50px;
     box-shadow: 4px 4px 27px rgba(0, 0, 0, 0.25);
+    transition: border-radius 0.5s;
 }
 
 .navbar-brand img {
@@ -90,6 +91,14 @@ header {
     .timer {
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+}
+@media (max-width: 991px) {
+    .navbar {
+        border-radius: 50px 50px 0px 0px;
+    }
+    .nav-item{
+        border-radius: 25px;
     }
 }
 @media (min-width: 2300px) {
