@@ -31,7 +31,8 @@ video {
 .video_quote {
     color: #fff; /* Колір тексту */
     font-family: 'e-Ukraine'; /* Шрифт */
-    font-size: 75px; /* Розмір шрифту */
+    font-size: clamp(18px, 4vw, 300px);
+    /* font-size: 75px; Розмір шрифту */
     font-weight: bold; /* Жирний шрифт */
     transition: font-size 0.5s; /* Плавна зміна розміру шрифту */
     position: relative; /* Позиціонування відносно батьківського елемента */

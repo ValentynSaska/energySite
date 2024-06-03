@@ -7,70 +7,89 @@
     font-style: normal;
 }
 
-.nav-link:not(.dropdown-toggle) {
-    text-decoration: none;
-    color: black !important;
-    cursor: pointer;
+body {
+    font-family: 'e-Ukraine', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-family: 'e-Ukraine';
-    font-size: 40px;
+    margin: 40px 0 20px;
+    font-size: clamp(20px, 2vw, 300px);
     font-weight: bold;
     transition: font-size 0.5s;
 }
-.navbar-nav {
-    display: flex;
-    align-items: center; /* Вирівнюємо елементи по центру по вертикалі */
-    height: 100%; /* Встановлюємо висоту nav на весь висоту вікна */
-    justify-content: center; /* Вирівнюємо елементи по центру по горизонталі */
-}
-.nav-item .nav-link {
-    display: flex;
-    align-items: center; /* Вирівнюємо елементи по центру по вертикалі */
-}
+
 .navbar {
-    color: black;
-    padding: 2% 2% 2% 2%;
+    padding: 2%;
     background-color: #FFDD8B;
-    border-radius: 50px 50px 50px 50px;
+    border-radius: 50px;
     box-shadow: 4px 4px 27px rgba(0, 0, 0, 0.25);
     transition: border-radius 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 1);
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(0, 0, 0, 1);
 }
 
 .navbar-brand img {
     border-radius: 10%;
 }
 
-.nav-item{
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    flex-grow: 1;
+    text-align: center;
     position: relative;
     border-radius: 50px;
     transition: background-color 0.5s ease;
-    padding: auto;
+    
 }
 
 .nav-item:hover {
-    color: #000000;
     background-color: #f8f9fa;
+}
+
+.nav-item .nav-link {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: black !important;
+    cursor: pointer;
+    display: flex; /* Додаємо Flexbox */
+    justify-content: center; /* Вирівнюємо по центру по горизонталі */
+    align-items: center; /* Вирівнюємо по центру по вертикалі */
 }
 
 .dropdown-menu {
     background-color: #539C39;
-    color: #ffffff !important;
 }
 
-/* Колір шрифту випадаючого меню */
 .dropdown-item {
     color: #ffffff;
+    font-size: clamp(18px, 1vw, 100px);
+
 }
 
 .timer {
     background: #539C39;
     color: #ffffff;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,35 +98,24 @@ header {
     transition: padding 0.5s;
 }
 
-@media (max-width: 1550px) {
-    header {
-        font-size: 30px;
-    }
-}
-@media (max-width: 1250px) {
-    header {
-        font-size: 25px;
-    }
-    .timer {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-}
 @media (max-width: 991px) {
+    .timer {
+        padding: 10px 0;
+    }
+    .navbar-collapse {
+        padding: 10px 0;
+    }
+    .nav-item {
+        padding: 8px; /* Додаємо відступи до кнопок */
+        text-align: center; /* Вирівнюємо текст по центру */
+    }
+    .nav-link {
+        padding: 10px 0; /* Додаємо відступи до посилань */
+    }
     .navbar {
-        border-radius: 50px 50px 0px 0px;
+        border-radius: 50px 50px 0 0;
     }
-    .nav-item{
+    .nav-item {
         border-radius: 25px;
-    }
-}
-@media (min-width: 2300px) {
-    header {
-        font-size: 60px;
-    }
-}
-@media (min-width: 5600px) {
-    header {
-        font-size: 100px;
     }
 }
