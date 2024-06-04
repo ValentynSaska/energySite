@@ -69,7 +69,8 @@ video {
     width: 90%;
     background-color: #ffffff;
     padding: 1% 1% 1% 3%;
-    border-radius: 50px;
+    font-size: clamp(20px, 2vw, 300px);
+    border-radius: 3vw;
     box-shadow: 4px 4px 27px rgba(0, 0, 0, 0.25);
     margin: 0 auto; /* Центруємо елемент по горизонталі */
 }
@@ -80,15 +81,17 @@ video {
 
 /* Слайдер */
 .splide{
-    margin-top: 80px;
-    margin-bottom: 60px;
-    width: 100rem; /* Встановлюємо ширину слайдера */
-    padding: 0 14rem;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    width: 95vw; /* Встановлюємо ширину слайдера */
+    padding: 0 10vw;
+    font-size: clamp(20px, 2vw, 300px);
+
 }
 .splide__track {
-    border-radius: 27px;
+    border-radius: 1.6vw;
     background-color: #fff;
-    height: 30rem; /* Встановлюємо висоту в 300px */
+    height: 35vw; /* Встановлюємо висоту  */
     overflow: hidden; /* Обрізаємо зайвий контент */
 }
 
@@ -104,13 +107,15 @@ video {
 
 /* Стилі для слайдів */
 .splide__pagination{
-    bottom: -50px;
+    bottom: -3vw;
 }
 .slide_wrapper{
     padding: 50px 15px;
 }
 .splide__arrow{
     background-color: #fff;
+    height: 5vw;
+    width: 5vw;
 }
 
 /* --------------------------------------------------------------------------*/
