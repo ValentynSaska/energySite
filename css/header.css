@@ -105,31 +105,39 @@ header {
     .timer {
         padding: 1vw 0;
         border-radius: 0;
+        transition: all 0.5s ease; 
     }
     .navbar-collapse {
-        padding: 10px 0;
+        padding: 1vw 0;
+        transition: all 0.5s ease; 
     }
     .nav-item {
-        padding: 8px; /* Додаємо відступи до кнопок */
+        padding: 1vw; /* Додаємо відступи до кнопок */
         text-align: center; /* Вирівнюємо текст по центру */
+        transition: all 0.5s ease; 
     }
     .nav-link {
         padding: 10px 0; /* Додаємо відступи до посилань */
+        transition: all 0.5s ease; 
     }
     .navbar {
         border-radius: 50px 50px 0 0;
+        transition: all 0.5s ease; 
     }
     .nav-item {
         border-radius: 25px;
+        transition: all 0.5s ease; 
     }
     .navbar-brand{
         width: 15vw;
+        transition: all 0.5s ease; 
     }
     header {
         margin: 0vw 0vw 0vw;
         font-size: clamp(20px, 2vw, 300px);
         font-weight: bold;
         transition: font-size 0.5s;
+        transition: all 0.5s ease; 
     }
     .navbar {
         padding: 4vw;
@@ -141,5 +149,6 @@ header {
         justify-content: center;
         align-items: center;
         color: black;
+        transition: all 0.5s ease; 
     }
 }

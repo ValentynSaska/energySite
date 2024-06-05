@@ -12,6 +12,7 @@
 body {
     /* background: #000; Чорний фон */
     background-color: #74A0D8;
+    
 }
 
 /* --------------------------------------------------------------------------*/
@@ -21,10 +22,12 @@ body {
     width: 100%; /* Ширина контейнера відео */
     height: 75%; /* Висота контейнера відео */
     overflow: hidden; /* Обрізання вмісту, який виходить за межі контейнера */
+    transition: all 0.5s ease; 
 }
 video {
     display: block; /* Відео відображається як блочний елемент */
     width: 100%; /* Розміри відео - 100% ширини контейнера */
+    transition: all 0.5s ease; 
 }
 
 /* Стилі для блоку з цитатою */
@@ -36,6 +39,7 @@ video {
     font-weight: bold; /* Жирний шрифт */
     transition: font-size 0.5s; /* Плавна зміна розміру шрифту */
     position: relative; /* Позиціонування відносно батьківського елемента */
+    transition: all 0.5s ease; 
 }
 
 /* Стилі для блоку з цитатою */
@@ -47,6 +51,7 @@ video {
     text-align: center; /* Вирівнювання тексту по центру */
     z-index: 1; /* Рівень накладання */
     white-space: nowrap; /* Запобігає переносу тексту на новий рядок */
+    transition: all 0.5s ease; 
 }
 
 /* --------------------------------------------------------------------------*/
@@ -61,7 +66,7 @@ video {
     font-weight: bold; /* Жирний шрифт */
     transition: font-size 0.5s; /* Плавна зміна розміру шрифту */
     background: #539C39;
-    
+    transition: all 0.5s ease; 
 }
 
 /* Надпис що нового */
@@ -69,23 +74,26 @@ video {
     width: 90%;
     background-color: #ffffff;
     padding: 1% 1% 1% 3%;
-    font-size: clamp(20px, 2vw, 300px);
+    font-size: clamp(12px, 2vw, 300px);
     border-radius: 3vw;
     box-shadow: 4px 4px 27px rgba(0, 0, 0, 0.25);
     margin: 0 auto; /* Центруємо елемент по горизонталі */
+    transition: all 0.5s ease; 
 }
 .news {
     display: grid;
     place-items: center;
+    transition: all 0.5s ease; 
 }
 
 /* Слайдер */
 .splide{
     margin-top: 4vw;
-    margin-bottom: 4.5vw;
+    margin-bottom: 5vw;
     width: 95vw; /* Встановлюємо ширину слайдера */
     padding: 0 10vw;
     font-size: clamp(20px, 2vw, 300px);
+    transition: all 0.5s ease; 
 
 }
 .splide__track {
@@ -93,31 +101,64 @@ video {
     background-color: #fff;
     height: 35vw; /* Встановлюємо висоту  */
     overflow: hidden; /* Обрізаємо зайвий контент */
+    transition: all 0.5s ease; 
 }
 
 /* Центруємо текст всередині .name */
 .name {
     text-align: center; /* Вирівнюємо текст по центру */
+    transition: all 0.5s ease; 
 }
 
 .name p {
     text-align: left; /* Вирівнюємо текст всередині параграфа зліва */
     margin-bottom: 0px;
+    transition: all 0.5s ease; 
 }
 
 /* Стилі для слайдів */
 .splide__pagination{
     bottom: -3vw;
+    transition: all 0.5s ease; 
 }
-.slide_wrapper{
-    padding: 50px 15px;
-}
+
 .splide__arrow{
     background-color: #fff;
     height: 5vw;
     width: 5vw;
+    transition: all 0.5s ease; 
 }
-
+@media (max-width: 991px) {
+    .splide__arrow{
+        visibility: hidden;
+        transition: all 0.5s ease; 
+    } 
+    .splide__pagination__page{
+        width: 1.5vw;
+        height: 1.5vw;
+        transition: all 0.5s ease; 
+    }
+    .splide__pagination{
+        bottom: -4vw;
+        transition: all 0.5s ease; 
+    }
+    .splide{
+        margin-top: 4vw;
+        margin-bottom: 5vw;
+        width: 100vw; /* Встановлюємо ширину слайдера */
+        padding: 0 10vw;
+        font-size: clamp(20px, 2vw, 300px);
+        transition: all 0.5s ease; 
+    
+    }
+    .splide__track {
+        border-radius: 1.6vw;
+        background-color: #fff;
+        height: 80vw; /* Встановлюємо висоту  */
+        overflow: hidden; /* Обрізаємо зайвий контент */
+        transition: all 0.5s ease; 
+    }
+}
 /* Новина в слайдері */
 
 /* --------------------------------------------------------------------------*/
