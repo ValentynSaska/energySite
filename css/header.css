@@ -42,7 +42,7 @@ header {
 }
 
 .navbar-brand img {
-    border-radius: 10%;
+    border-radius: 0.80vw;
 }
 
 .navbar-nav {
