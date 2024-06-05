@@ -14,12 +14,15 @@ body {
 }
 
 header {
-    margin: 40px 0 20px;
+    margin: 1vw 3vw 1vw;
     font-size: clamp(20px, 2vw, 300px);
     font-weight: bold;
     transition: font-size 0.5s;
 }
 
+.navbar-brand{
+    width: 7vw;
+}
 .navbar {
     padding: 2%;
     background-color: #FFDD8B;
@@ -100,7 +103,8 @@ header {
 
 @media (max-width: 991px) {
     .timer {
-        padding: 10px 0;
+        padding: 1vw 0;
+        border-radius: 0;
     }
     .navbar-collapse {
         padding: 10px 0;
@@ -117,5 +121,25 @@ header {
     }
     .nav-item {
         border-radius: 25px;
+    }
+    .navbar-brand{
+        width: 15vw;
+    }
+    header {
+        margin: 0vw 0vw 0vw;
+        font-size: clamp(20px, 2vw, 300px);
+        font-weight: bold;
+        transition: font-size 0.5s;
+    }
+    .navbar {
+        padding: 4vw;
+        background-color: #FFDD8B;
+        border-radius: 0;
+        box-shadow: 4px 4px 27px rgba(0, 0, 0, 0.25);
+        transition: border-radius 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
     }
 }

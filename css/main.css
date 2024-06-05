@@ -31,7 +31,7 @@ video {
 .video_quote {
     color: #fff; /* Колір тексту */
     font-family: 'e-Ukraine'; /* Шрифт */
-    font-size: clamp(18px, 4vw, 300px);
+    font-size: clamp(10px, 4vw, 300px);
     /* font-size: 75px; Розмір шрифту */
     font-weight: bold; /* Жирний шрифт */
     transition: font-size 0.5s; /* Плавна зміна розміру шрифту */
@@ -54,7 +54,7 @@ video {
 /* Блок новин */
 .news{
     display: flex;
-    padding-top: 70px;
+    padding-top: 2vw;
     color: #000000; /* Колір тексту */
     font-family: 'e-Ukraine'; /* Шрифт */
     font-size: clamp(20px, 2vw, 300px); /* Розмір шрифту */
@@ -82,7 +82,7 @@ video {
 /* Слайдер */
 .splide{
     margin-top: 4vw;
-    margin-bottom: 4vw;
+    margin-bottom: 4.5vw;
     width: 95vw; /* Встановлюємо ширину слайдера */
     padding: 0 10vw;
     font-size: clamp(20px, 2vw, 300px);

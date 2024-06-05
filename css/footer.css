@@ -10,31 +10,72 @@
     font-style: normal;
 }
 
-footer{
+footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 20px;
-    background-color: #FFDD8B; 
+    background-color: #FFDD8B;
+    padding: 3vw 4vw 2.5vw 4vw;
+    transition: all 0.5s ease; 
 }
 
 ol, ul {
-     padding-left: 0;
-}
-.logo{
-    width: 10vw;
-}
-img {
-    border-radius: 0.80vw;
+    padding-left: 0;
 }
 
-.contact_info, .adress_info {
-    flex: 1;
-    margin: 10px;
+.logo {
+    width: 16vw;
+    transition: all 0.5s ease; 
 }
+
+img {
+    border-radius: 0.80vw;
+    width: 100%; /* Щоб логотип масштабувався за розміром контейнера */
+    height: auto; /* Збереження пропорцій */
+}
+
+.title {
+    font-size: clamp(10px, 2vw, 200px);
+    transition: all 0.5s ease; 
+}
+
+.title_ins {
+    font-size: clamp(10px, 1vw, 200px);
+    transition: all 0.5s ease;
+}
+
 .creator_info {
     width: 100%;
+    font-size: clamp(10px, 1.5vw, 200px);
     text-align: center;
-    margin-top: 20px;
+    margin-top: 2vw;
+    transition: all 0.5s ease;
+}
+
+@media (max-width: 991px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        border-radius: 5vw;
+        width: 100%; /* Щоб логотип масштабувався за розміром контейнера */
+        height: auto; /* Збереження пропорцій */
+    }
+
+    .logo {
+        width: 40vw;
+        transition: all 0.5s ease; 
+        text-align: center;
+        margin-bottom: 5vw;
+        border-radius: 0.80vw;
+    }
+    
+    .contact_info, .adress_info {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2vw;
+    }
 }
