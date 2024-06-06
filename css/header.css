@@ -54,7 +54,10 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+.dropdown-item{
+    font-size: clamp(40px, 5vw, 300px);
 
+}
 .nav-item {
     flex-grow: 1;
     text-align: center;
@@ -103,6 +106,14 @@ header {
 }
 
 @media (max-width: 991px) {
+    .dropdown-item{
+        font-size: clamp(40px, 3vw, 300px);
+
+    }
+    .dropdown-menu {
+        background-color: #539C39;
+        border-radius: 1vw;
+    }
     .nav-item:hover {
         background-color: #f8f9fa;
         border-radius: 2vw;
@@ -145,7 +156,7 @@ header {
     }
     header {
         margin: 0vw 0vw 0vw;
-        font-size: clamp(20px, 2vw, 300px);
+        font-size: clamp(40px, 2vw, 300px);
         font-weight: bold;
         transition: font-size 0.5s;
         transition: all 0.5s ease; 
