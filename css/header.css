@@ -24,7 +24,7 @@ header {
     width: 7vw;
 }
 .navbar {
-    padding: 2%;
+    padding: 1.3vw;
     background-color: #FFDD8B;
     border-radius: 50px;
     box-shadow: 4px 4px 27px rgba(0, 0, 0, 0.25);
@@ -81,6 +81,7 @@ header {
 
 .dropdown-menu {
     background-color: #539C39;
+    border-radius: 1vw;
 }
 
 .dropdown-item {
@@ -102,6 +103,16 @@ header {
 }
 
 @media (max-width: 991px) {
+    .nav-item:hover {
+        background-color: #f8f9fa;
+        border-radius: 2vw;
+    
+    }
+    .dropdown-menu {
+        background-color: #539C39;
+        border-radius: 2vw;
+    }
+    
     .timer {
         padding: 1vw 0;
         border-radius: 0;

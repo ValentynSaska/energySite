@@ -29,7 +29,7 @@ ol, ul {
     transition: all 0.5s ease; 
 }
 
-img {
+.footer_logo  {
     border-radius: 0.80vw;
     width: 100%; /* Щоб логотип масштабувався за розміром контейнера */
     height: auto; /* Збереження пропорцій */
@@ -59,7 +59,7 @@ img {
         align-items: center;
     }
 
-    img {
+    .footer_logo {
         border-radius: 5vw;
         width: 100%; /* Щоб логотип масштабувався за розміром контейнера */
         height: auto; /* Збереження пропорцій */

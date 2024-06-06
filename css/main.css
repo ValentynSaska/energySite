@@ -4,13 +4,17 @@
 @font-face {
     font-family: 'e-Ukraine';
     src: url('../fonts/e-UkraineHead-Bold.otf') format('opentype');
-    font-weight: 700;
+    font-weight: 500;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Mariupol';
+    src: url('../fonts/Mariupol-Medium.ttf') format('opentype');
+    font-weight: 1000;
+    font-style: normal;
+}
 /* Загальні стилі для body */
 body {
-    /* background: #000; Чорний фон */
     background-color: #74A0D8;
     
 }
@@ -67,6 +71,7 @@ video {
     transition: font-size 0.5s; /* Плавна зміна розміру шрифту */
     background: #539C39;
     transition: all 0.5s ease; 
+    width: 100%;
 }
 
 /* Надпис що нового */
@@ -88,10 +93,10 @@ video {
 
 /* Слайдер */
 .splide{
-    margin-top: 4vw;
+    margin-top: 3.5vw;
     margin-bottom: 5vw;
     width: 95vw; /* Встановлюємо ширину слайдера */
-    padding: 0 10vw;
+    padding: 0 7.5vw;
     font-size: clamp(20px, 2vw, 300px);
     transition: all 0.5s ease; 
 
@@ -99,7 +104,7 @@ video {
 .splide__track {
     border-radius: 1.6vw;
     background-color: #fff;
-    height: 35vw; /* Встановлюємо висоту  */
+    height: 35.5vw; /* Встановлюємо висоту  */
     overflow: hidden; /* Обрізаємо зайвий контент */
     transition: all 0.5s ease; 
 }
@@ -120,18 +125,75 @@ video {
 .splide__pagination{
     bottom: -3vw;
     transition: all 0.5s ease; 
+    padding: 0;
+}
+.splide__pagination__page{
+    width: 0.4vw;
+    height: 0.4vw;
+    transition: all 0.5s ease; 
 }
 
 .splide__arrow{
     background-color: #fff;
-    height: 5vw;
-    width: 5vw;
+    height: 4.5vw;
+    width: 4.5vw;
     transition: all 0.5s ease; 
 }
 @media (max-width: 991px) {
+
+    /* Надпис що нового */
+    .name{
+        width: 90%;
+        background-color: #ffffff;
+        padding: 1% 1% 1% 3%;
+        font-size: clamp(12px, 2vw, 300px);
+        border-radius: 3vw;
+        box-shadow: 4px 4px 27px rgba(0, 0, 0, 0.25);
+        margin: 2vw auto; /* Центруємо елемент по горизонталі */
+        transition: all 0.5s ease; 
+    }
+    .news {
+        display: grid;
+        place-items: center;
+        transition: all 0.5s ease; 
+        padding-top: 4vw;
+        padding-bottom: 4vw;
+    }
+
+    /* Слайдер */
+    .splide{
+        margin-top: 3.5vw;
+        margin-bottom: 5vw;
+        width: 95vw; /* Встановлюємо ширину слайдера */
+        padding: 0 7.5vw;
+        font-size: clamp(20px, 2vw, 300px);
+        transition: all 0.5s ease; 
+
+    }
+    .splide__track {
+        border-radius: 1.6vw;
+        background-color: #fff;
+        height: 35.5vw; /* Встановлюємо висоту  */
+        overflow: hidden; /* Обрізаємо зайвий контент */
+        transition: all 0.5s ease; 
+    }
+
+    /* Центруємо текст всередині .name */
+    .name {
+        text-align: center; /* Вирівнюємо текст по центру */
+        transition: all 0.5s ease; 
+    }
+
+    .name p {
+        text-align: left; /* Вирівнюємо текст всередині параграфа зліва */
+        margin-bottom: 0px;
+        transition: all 0.5s ease; 
+    }
     .splide__arrow{
         visibility: hidden;
         transition: all 0.5s ease; 
+        height: 0vw;
+        width: 0vw;
     } 
     .splide__pagination__page{
         width: 1.5vw;
@@ -143,10 +205,10 @@ video {
         transition: all 0.5s ease; 
     }
     .splide{
-        margin-top: 4vw;
+        margin-top: 5vw;
         margin-bottom: 5vw;
         width: 100vw; /* Встановлюємо ширину слайдера */
-        padding: 0 10vw;
+        padding: 0vw;
         font-size: clamp(20px, 2vw, 300px);
         transition: all 0.5s ease; 
     
@@ -154,12 +216,131 @@ video {
     .splide__track {
         border-radius: 1.6vw;
         background-color: #fff;
-        height: 80vw; /* Встановлюємо висоту  */
+        height: auto; /* Встановлюємо висоту  */
         overflow: hidden; /* Обрізаємо зайвий контент */
         transition: all 0.5s ease; 
     }
 }
 /* Новина в слайдері */
+.img_news_container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.img_news{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.splide__slide{
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.all_text_news {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 1vw 2vw;
+}
+
+.header_news {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title_news{
+    font-size: clamp(15px, 1.8vw, 200px);
+}
+
+.date_news{
+    font-size: clamp(15px, 1.5vw, 200px);
+}
+
+.title_news, .date_news {
+    margin: 0;
+}
+
+.text_news {
+    font-size: clamp(10px, 1.5vw, 300px);
+    font-family: 'Mariupol'; /* Шрифт */
+    width: 38.6vw;
+    height: 24.5vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    text-align: justify; /* Вирівнювання тексту за шириною */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 11; /* Кількість рядків, після яких текст обрізається */
+    line-clamp: 5;
+}
+
+.btn {
+    align-self: flex-end; /* Вирівнювання кнопки справа */
+    border-radius: 50vw;
+    background: #539C39;
+    color: white;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    border-color: #539C39;
+    opacity: 77%;
+    font-size: clamp(10px, 1vw, 300px);
+    padding: 0.5vw;
+}
+
+@media (max-width: 991px) {
+    .splide__slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img_news_container {
+        width: 100%;
+        height: 100%; 
+    }
+
+    .all_text_news {
+        width: 100%;
+        padding: 4vw;
+        text-align: center;
+        
+    }
+
+    .header_news {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1vw; 
+    }
+
+    .title_news, .date_news {
+        font-size: clamp(13px, 2vw, 200px);
+    }
+    .date_news {
+        margin-top: 3vw;
+    }
+    .text_news {
+        font-size: clamp(10px, 2vw, 300px);
+        width: 100%;
+        height: auto;
+        margin-top: 4vw;
+        text-align: justify; /* Вирівнювання тексту за шириною */
+
+    }
+
+    .btn {
+        align-self: center;
+        font-size: clamp(10px, 2vw, 300px);
+        padding: 2vw; 
+        margin-top: 3vw; 
+    }
+    
+}
 
 /* --------------------------------------------------------------------------*/
 
